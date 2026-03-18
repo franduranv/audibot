@@ -4,63 +4,8 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AudiBot — Compliance Fiscal SAT | ZXY Ventures</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --bg: #0A0A1A; --bg2: #12122A; --bg3: #1A1A3A;
-    --purple: #6C63FF; --purple-light: #8B85FF;
-    --text: #E2E2F0; --muted: #8888AA; --border: #2A2A4A;
-  }
-  body { background: var(--bg); color: var(--text); font-family: 'Raleway', sans-serif; line-height: 1.6; }
-  h1, h2, h3 { font-family: 'Oswald', sans-serif; font-weight: 600; }
-  a { color: var(--purple); text-decoration: none; }
-  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
-  /* Nav */
-  nav { border-bottom: 1px solid var(--border); padding: 16px 0; }
-  nav .inner { display: flex; justify-content: space-between; align-items: center; }
-  nav .brand { font-family: 'Oswald', sans-serif; font-size: 1.2rem; color: var(--text); }
-  nav .brand span { color: var(--purple); }
-  /* Hero */
-  .hero { padding: 80px 0 60px; text-align: center; }
-  .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.15; margin-bottom: 20px; }
-  .hero h1 .accent { color: var(--purple); }
-  .hero p { color: var(--muted); font-size: 1.15rem; max-width: 640px; margin: 0 auto 36px; }
-  .btn { display: inline-block; background: var(--purple); color: white; padding: 14px 32px; border-radius: 8px; font-family: 'Oswald', sans-serif; font-size: 1rem; letter-spacing: .5px; transition: background .2s; }
-  .btn:hover { background: var(--purple-light); color: white; }
-  .btn-outline { background: transparent; border: 1px solid var(--purple); color: var(--purple); margin-left: 12px; }
-  /* Sections */
-  section { padding: 60px 0; border-top: 1px solid var(--border); }
-  section h2 { font-size: 1.9rem; margin-bottom: 32px; }
-  .badge { display: inline-block; background: var(--purple); color: white; padding: 4px 12px; border-radius: 4px; font-size: .75rem; font-family: 'Oswald'; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
-  /* Grid */
-  .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-  .card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
-  .card h3 { font-size: 1.1rem; margin-bottom: 8px; }
-  .card p { color: var(--muted); font-size: .9rem; }
-  /* Pricing */
-  .pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
-  .price-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-align: center; }
-  .price-card.featured { border-color: var(--purple); }
-  .price-card .amount { font-family: 'Oswald'; font-size: 2rem; color: var(--purple); }
-  .price-card .period { color: var(--muted); font-size: .85rem; }
-  .price-card h3 { margin-bottom: 8px; }
-  .price-card ul { list-style: none; color: var(--muted); font-size: .85rem; margin-top: 12px; }
-  .price-card ul li::before { content: "✓ "; color: var(--purple); }
-  /* FAQ */
-  .faq-item { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
-  .faq-q { padding: 16px 20px; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; }
-  .faq-q:hover { background: var(--bg2); }
-  .faq-a { padding: 0 20px; max-height: 0; overflow: hidden; color: var(--muted); transition: all .3s; font-size: .9rem; }
-  .faq-a.open { padding: 0 20px 16px; max-height: 200px; }
-  /* CTA Section */
-  .cta-section { background: var(--bg2); border-radius: 16px; padding: 48px; text-align: center; }
-  .cta-section h2 { margin-bottom: 16px; }
-  .cta-section p { color: var(--muted); margin-bottom: 28px; }
-  /* Footer */
-  footer { padding: 32px 0; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: .85rem; }
-  @media (max-width: 640px) { .btn-outline { display: block; margin: 12px auto 0; } }
-</style>
 <script>
   function toggleFaq(el) {
     const a = el.nextElementSibling;
@@ -74,24 +19,24 @@
 <body>
 <nav><div class="container inner">
   <span class="brand">ZXY <span>Ventures</span></span>
-  <a href="mailto:fran@zxy.vc" class="btn" style="padding:8px 20px;font-size:.85rem;">Contactar</a>
+  <a href="mailto:fran@zxy.vc" class="btn-primary" style="padding:8px 20px;font-size:.85rem;">Contactar</a>
 </div></nav>
 
 <section class="hero"><div class="container">
   <span class="badge">Nuevo</span>
   <h1>¿Tu empresa sobreviviría<br><span class="accent">una auditoría del SAT</span> mañana?</h1>
   <p>AudiBot detecta riesgos fiscales antes de que lleguen. Verifica el 69-B, analiza tus CFDIs y te entrega un reporte semanal de riesgo. Desde $399 MXN/mes.</p>
-  <a href="mailto:audibot@zxy.vc?subject=Diagnóstico gratuito AudiBot" class="btn">Quiero el diagnóstico gratuito</a>
-  <a href="#precios" class="btn btn-outline">Ver planes</a>
+  <a href="mailto:audibot@zxy.vc?subject=Diagnóstico gratuito AudiBot" class="btn-primary">Quiero el diagnóstico gratuito</a>
+  <a href="#precios" class="btn-secondary">Ver planes</a>
 </div></section>
 
 <section><div class="container">
   <span class="badge">El Problema</span>
   <h2>El SAT lanzó FISCALIA 2.0. ¿Estás listo?</h2>
   <div class="grid3">
-    <div class="card"><h3>+300% auditorías</h3><p>El SAT automatizó la detección de irregularidades. Más auditorías en 2026 que en los últimos 5 años juntos.</p></div>
-    <div class="card"><h3>12,000 PyMEs en riesgo</h3><p>Solo en 2026. La mayoría no lo sabe hasta que llega la notificación.</p></div>
-    <div class="card"><h3>$50K–$500K MXN en consecuencias</h3><p>Multas, honorarios de abogado fiscal y tiempo perdido. Una auditoría mal manejada puede cerrar un negocio.</p></div>
+    <div class="venture-card"><h3>+300% auditorías</h3><p>El SAT automatizó la detección de irregularidades. Más auditorías en 2026 que en los últimos 5 años juntos.</p></div>
+    <div class="venture-card"><h3>12,000 PyMEs en riesgo</h3><p>Solo en 2026. La mayoría no lo sabe hasta que llega la notificación.</p></div>
+    <div class="venture-card"><h3>$50K–$500K MXN en consecuencias</h3><p>Multas, honorarios de abogado fiscal y tiempo perdido. Una auditoría mal manejada puede cerrar un negocio.</p></div>
   </div>
 </div></section>
 
@@ -99,9 +44,9 @@
   <span class="badge">La Solución</span>
   <h2>AudiBot — tu agente fiscal que nunca duerme</h2>
   <div class="grid3">
-    <div class="card"><h3>Verificación 69-B</h3><p>Verifica todos tus proveedores contra la lista negra del SAT en tiempo real. Alerta inmediata si alguno cae.</p></div>
-    <div class="card"><h3>Análisis de CFDIs</h3><p>Descarga y analiza tus facturas emitidas y recibidas. Detecta discrepancias antes de que el SAT las vea.</p></div>
-    <div class="card"><h3>Reporte semanal de riesgo</h3><p>Nivel BAJO/MEDIO/ALTO/CRÍTICO con acciones preventivas concretas. Llega a tu WhatsApp cada lunes.</p></div>
+    <div class="venture-card"><h3>Verificación 69-B</h3><p>Verifica todos tus proveedores contra la lista negra del SAT en tiempo real. Alerta inmediata si alguno cae.</p></div>
+    <div class="venture-card"><h3>Análisis de CFDIs</h3><p>Descarga y analiza tus facturas emitidas y recibidas. Detecta discrepancias antes de que el SAT las vea.</p></div>
+    <div class="venture-card"><h3>Reporte semanal de riesgo</h3><p>Nivel BAJO/MEDIO/ALTO/CRÍTICO con acciones preventivas concretas. Llega a tu WhatsApp cada lunes.</p></div>
   </div>
 </div></section>
 
@@ -121,7 +66,7 @@
 <section><div class="container"><div class="cta-section">
   <h2>Primera semana de diagnóstico gratuita</h2>
   <p>Descubre tu nivel de riesgo fiscal actual. Sin compromisos.</p>
-  <a href="mailto:audibot@zxy.vc?subject=Quiero mi diagnóstico gratuito" class="btn">Empezar ahora — es gratis</a>
+  <a href="mailto:audibot@zxy.vc?subject=Quiero mi diagnóstico gratuito" class="btn-primary">Empezar ahora — es gratis</a>
 </div></div></section>
 
 <footer class="container">
