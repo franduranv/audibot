@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>
+    (function(){
+      var t=localStorage.getItem('zxy-theme');
+      document.documentElement.setAttribute('data-theme',
+        t||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+    })();
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AudiBot — El Escudo Fiscal de las PyMEs Mexicanas | ZXY Ventures</title>
@@ -24,20 +34,27 @@
     .cta-minimal p{color:var(--muted);margin-bottom:32px}
     @media(max-width:640px){.pitch-grid{grid-template-columns:1fr}.pitch-stat .num{font-size:40px}}
   </style>
+</head>
+<body>
   <nav>
     <div class="container inner">
       <div style="display:flex;align-items:center;gap:20px;">
         <a href="https://zxy.vc" style="font-size:12px;color:var(--muted);font-family:var(--font-b);display:inline-flex;align-items:center;gap:4px;opacity:0.7;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">← zxy.vc</a>
         <span class="brand">AudiBot</span>
       </div>
+      
       <a href="mailto:audibot@zxy.vc" class="btn-secondary" style="padding:8px 20px;font-size:.85rem;">audibot@zxy.vc</a>
+      <div class="nav-controls">
+        <button class="lang-toggle" aria-label="Switch language">ES</button>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch theme"></button>
+      </div>
     </div>
   </nav>
 
   <section id="hero">
     <div class="container">
       <div class="hero-inner">
-        <div class="hero-eyebrow fade-in">Prevención Fiscal AI · México · LatAm</div>
+        <div class="hero-eyebrow fade-in" data-es="Prevención Fiscal AI · México · LatAm" data-en="AI Tax Prevention · Mexico · LatAm">Prevención Fiscal AI · México · LatAm</div>
         <h1 class="hero-headline fade-in fade-in-delay-1">
           El SAT lanzó FISCALIA 2.0.<br>Las auditorías aumentaron 300%.<br>
           <span class="line2">Las PyMEs siguen reaccionando tarde.</span>
@@ -47,7 +64,7 @@
           detecta riesgos antes de que se conviertan en auditorías, multas o requerimientos.
         </p>
         <div class="hero-ctas fade-in fade-in-delay-3">
-          <a href="mailto:audibot@zxy.vc" class="btn-primary">Conocer más</a>
+          <a href="mailto:audibot@zxy.vc" class="btn-primary" data-es="Conocer más" data-en="Learn More">Conocer más</a>
         </div>
       </div>
     </div>
@@ -55,7 +72,7 @@
 
   <section class="section">
     <div class="container">
-      <div class="section-tag">La oportunidad</div>
+      <div class="section-tag" data-es="La oportunidad" data-en="The Opportunity">La oportunidad</div>
       <div class="narrative">
         <h2>FISCALIA 2.0 cambió las reglas.<br>La mayoría de las PyMEs no lo saben todavía.</h2>
         <p>Con el lanzamiento de FISCALIA 2.0 en 2025, el SAT automatizó la detección de irregularidades. El resultado es contundente: 12,000 PyMEs en riesgo de auditoría en 2026 por detección automática de discrepancias.</p>
@@ -80,7 +97,7 @@
 
   <section class="section" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
     <div class="container">
-      <div class="section-tag">El problema</div>
+      <div class="section-tag" data-es="El problema" data-en="The Problem">El problema</div>
       <div class="narrative">
         <h2>Las PyMEs reaccionan cuando<br>ya es demasiado tarde.</h2>
         <p>El modelo actual de compliance fiscal es periódico y reactivo. El contador de la PyME revisa la situación mensualmente — pero el SAT cruza datos en tiempo real. La brecha entre la velocidad de la fiscalización y la capacidad de respuesta de las PyMEs se amplía cada año.</p>
@@ -91,7 +108,7 @@
   </section>
   <section class="section">
     <div class="container">
-      <div class="section-tag">La solución</div>
+      <div class="section-tag" data-es="La solución" data-en="The Solution">La solución</div>
       <div class="narrative">
         <h2>Un agente que monitorea el SAT<br>como si fuera el SAT.</h2>
         <p>AudiBot conecta el FIEL de la empresa, descarga automáticamente los CFDIs, verifica la lista 69-B en tiempo real, analiza patrones de discrepancia con IA y genera un reporte semanal de riesgo con nivel BAJO / MEDIO / ALTO / CRÍTICO.</p>
@@ -102,7 +119,7 @@
   </section>
   <section class="section" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
     <div class="container">
-      <div class="section-tag">Estado actual</div>
+      <div class="section-tag" data-es="Estado actual" data-en="Current Status">Estado actual</div>
       <div class="narrative">
         <h2>Early access activo.<br>500K empresas como TAM inmediato.</h2>
         <p>AudiBot está en proceso de validación con las primeras PyMEs piloto. El mercado total direccionable son 500,000 empresas mexicanas actualmente en zona de riesgo fiscal — con una tasa de adopción actual del compliance fiscal del 30%, la oportunidad de captura es clara.</p>
@@ -111,7 +128,7 @@
   </section>
   <section class="section">
     <div class="container">
-      <div class="section-tag">Visión</div>
+      <div class="section-tag" data-es="Visión" data-en="Vision">Visión</div>
       <div class="vision-box fade-in">
         <blockquote>"En 3 años, AudiBot es la plataforma de compliance fiscal preventivo líder en México y LatAm — adaptada a los sistemas de facturación electrónica de Colombia, Chile y Perú."</blockquote>
       </div>
@@ -120,8 +137,8 @@
   <section class="section">
     <div class="container">
       <div class="cta-minimal fade-in">
-        <h2>¿Ves la oportunidad?</h2>
-        <p>Escríbenos. Compartimos el deck completo y datos del piloto con NDA.</p>
+        <h2 data-es="¿Ves la oportunidad?" data-en="Do you see the opportunity?">¿Ves la oportunidad?</h2>
+        <p data-es="Escríbenos. Compartimos el deck completo y datos del piloto con NDA." data-en="Write to us. We share the full deck and pilot data under NDA.">Escríbenos. Compartimos el deck completo y datos del piloto con NDA.</p>
         <a href="mailto:audibot@zxy.vc" class="btn-primary" style="font-size:1.1rem;padding:16px 40px;">audibot@zxy.vc</a>
       </div>
     </div>
@@ -130,21 +147,15 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="footer-logo">ZXY</div>
-        <div class="footer-tagline">"La diferencia entre usar IA y ser IA."</div>
+        <div class="footer-tagline" data-es=""La diferencia entre usar IA y ser IA."" data-en=""The difference between using AI and being AI."">"La diferencia entre usar IA y ser IA."</div>
       </div>
       <div class="footer-links">
         <a href="https://zxy.vc">ZXY Ventures</a>
         <a href="mailto:audibot@zxy.vc">audibot@zxy.vc</a>
       </div>
     </div>
-    <div class="footer-bottom"><span>ZXY Ventures · zxy.vc · México · LatAm</span></div>
+    <div class="footer-bottom"><span data-es="ZXY Ventures · zxy.vc · México · LatAm" data-en="ZXY Ventures · zxy.vc · Mexico · LatAm">ZXY Ventures · zxy.vc · México · LatAm</span></div>
   </footer>
-  <script>
-    const fadeEls = document.querySelectorAll('.fade-in');
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    fadeEls.forEach(el => io.observe(el));
-  </script>
+  <script src="landing.js"></script>
 </body>
 </html>

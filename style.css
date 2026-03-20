@@ -898,3 +898,30 @@ footer {
   .pipeline-arrow { display: none; }
   .pipeline-stage { min-width: 100px; }
 }
+
+
+/* ── Nav controls (theme + lang) ── */
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.lang-toggle {
+  background: none;
+  border: 1px solid var(--border2);
+  color: var(--text2);
+  font-family: var(--font-b);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  padding: 0 10px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color .2s, color .2s;
+}
+.lang-toggle:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
